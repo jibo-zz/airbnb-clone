@@ -32,6 +32,6 @@ class Review(core_models.TimeStampedModel):
             + self.check_in
             + self.value
         ) / 6
-        return avg
+        return round(avg, 2)
 
     rating_average.short_description = "Average"
